@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,400&display=swap');
 
 :root {
-  --modal-dutation: 1s;
-  --primary-color: #30336b;
-  --scondary-color: #be2edd;
+  --modal-dutation: 1.5s;
+  --primary-color: #2e3168;
+  --scondary-color: hsl(202, 72%, 52%);
+  --thirdly-color: #6167cf;
 }
 * {
   box-sizing: border-box;
@@ -14,14 +15,26 @@ body {
   transition: transform 0.3s ease;
 }
 
-body.show-nav{
+body.show-nav {
   /* width of nav */
-  transform: translate(200px);
+  transform: translateX(200px);
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 900;
+  color: blue;
+  
+}
+span{
+  text-transform: capitalize;
+  font-weight: 900;
+  color: rgb(98, 0, 255);
 }
 
 nav {
-  background-color: var(--primary-color);
-  border-right: 2px solid rgba(200, 200, 200 0.1);
+  background-color: var(--thirdly-color);
+  border-right: 4px solid rgba(200, 200, 200 0.1);
   position: fixed;
   top: 0;
   left: 0;
@@ -121,9 +134,8 @@ button:focus {
   bottom: 0;
 }
 
-.modal-container.show-modal{
+.modal-container.show-modal {
   display: block;
-  
 }
 
 .modal {
@@ -174,11 +186,11 @@ button:focus {
   right: 0;
 }
 
-@keyframes modalopen{
-  from{
+@keyframes modalopen {
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
